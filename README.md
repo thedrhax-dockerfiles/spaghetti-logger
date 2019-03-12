@@ -1,10 +1,25 @@
-Spaghetti Logger
+Spaghetti Logger [![](https://images.microbadger.com/badges/image/thedrhax/spaghetti-logger.svg)](https://hub.docker.com/r/thedrhax/spaghetti-logger)
 ================
 
 Spaghetti Logger is a Twitch.tv chat logger.
 
 Fake Spaghetti Logger is a Beam.pro chat logger. See README.beam.md for instructions for Beam.
 
+Docker
+======
+
+Build container image manually:
+
+        docker build -f docker/Dockerfile -t thedrhax/spaghetti-logger .
+
+... or pull it from Docker Hub:
+
+        docker pull thedrhax/spaghetti-logger
+
+Now you can start spaghetti-logger using this command:
+
+        docker run -d -v logs:/logs -e CHANNELS="channel1 channel2" \
+                   thedrhax/spaghetti-logger --host HOST --port PORT
 
 Quick Start
 ===========
